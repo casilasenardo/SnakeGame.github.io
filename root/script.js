@@ -379,7 +379,7 @@ function gameOver() {
   CTX.fillText(`ДЭЭД ОНОО   ${maxScore}`, W / 2, H / 2 + 80);
 }
 function nextEvent(){
-  window.location.href='SnakeGame.github.io/Special screen/special.html';
+  window.location.href='../SnakeGame.github.io/Special screen/special.html';
   // location.reload();
   overcount = 0;
 }
