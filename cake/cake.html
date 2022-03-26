@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Хүсэл :></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+autor: Marco Barría 
+https://twitter.com/marco_bf
+-->
+<div>
+  <div id="laa" class="cake">
+    <div class="velas">
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+    </div>
+    <div class="cobertura"></div>
+    <div class="bizcocho"></div>
+    <h1 id="text">Нүдээ аниад Хүслээ шивнээрэй! ^_^</h1>
+    <p></p>
+    
+  </div>
+  <button  id="btn" >Хүслээ бодож дууссан бол энд дар</button>
+</div>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>
+<script>
+  var btn = document.getElementById('btn');
+  var laa = document.getElementById('laa');
+  var text = document.getElementById('text').textContent;
+  btn.style.cursor = 'pointer';
+  laa.style.cursor = 'pointer';
+  laa.onclick = function() {
+    location.href = "../gift/gift.html";
+  };
+  btn.onclick = function(){
+    btn.style.visibility='hidden';
+    document.getElementById("text").innerHTML = 'Бялуун дээр дараад лааг үлээ! :>';
+    
+  }
+</script>

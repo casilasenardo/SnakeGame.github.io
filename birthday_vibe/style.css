@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Patua+One);
+
+* {
+	font-family: 'Patua One', cursive;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+canvas {
+	background-color: transparent;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+}
+
+html {
+	overflow: auto;
+	background-color: rgba(0, 48, 48, 1.0);
+	background-image: radial-gradient(circle, rgba(0, 96, 96, 1.0), rgba(0, 0, 0, 0.5));
+	width: 100%;
+	height: 100%;
+}
+html, body {
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+}
+
+h2 {
+	margin-top: 25%;
+	font-size: 100px;
+	color: white;
+	text-shadow: 0px 0px 8px white;
+	justify-content: center;
+	vertical-align: middle;
+	text-align: center;
+	z-index: 10;
+}
+
+h1 {
+	color: white;
+	font-size: 90px;
+	text-shadow: 0px 0px 8px white;
+	justify-content: center;
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: center;
+	z-index: 10;
+}
+
+button {
+	margin: 0;
+	--glow-color: rgb(217, 176, 255);
+	--glow-spread-color: rgba(191, 123, 255, 0.781);
+	--enhanced-glow-color: rgb(231, 206, 255);
+	--btn-color: rgb(100, 61, 136);
+	border: .25em solid var(--glow-color);
+	padding: 1em 3em;
+	color: var(--glow-color);
+	font-size: 15px;
+	font-weight: bold;
+	background-color: var(--btn-color);
+	border-radius: 1em;
+	outline: none;
+	box-shadow: 0 0 1em .25em var(--glow-color),
+		   0 0 4em 1em var(--glow-spread-color),
+		   inset 0 0 .75em .25em var(--glow-color);
+	text-shadow: 0 0 .5em var(--glow-color);
+	position: relative;
+	transition: all 0.3s;
+   }
+   
+   button::after {
+	pointer-events: none;
+	content: "";
+	position: absolute;
+	top: 120%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--glow-spread-color);
+	filter: blur(2em);
+	opacity: .7;
+	transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+	color: var(--btn-color);
+	background-color: var(--glow-color);
+	box-shadow: 0 0 1em .25em var(--glow-color),
+		   0 0 4em 2em var(--glow-spread-color),
+		   inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+	box-shadow: 0 0 0.6em .25em var(--glow-color),
+		   0 0 2.5em 2em var(--glow-spread-color),
+		   inset 0 0 .5em .25em var(--glow-color);
+   }
